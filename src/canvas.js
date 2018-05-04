@@ -35,22 +35,6 @@ export default (width, height) => {
         return gl;
     };
 
-    // canvas.getPatchedContext = function(type) {
-    //     const context = getContext.call(canvas, type);
-    //     const { drawImage } = context;
-    //     if (type === '2d') {
-    //         context.drawImage = (image, ...args) => {
-    //             if (image.gl) {                    
-    //                 drawGLToContext(image, image.gl, width, height);
-    //             }
-    //             else {
-    //                 drawImage.call(context, image, ...args);
-    //             }
-    //         };
-    //     }
-    //     return context;
-    // }
-
     canvas.getContext = function(type) {
         switch(type) {
             case 'webgl':
