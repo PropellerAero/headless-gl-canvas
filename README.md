@@ -12,3 +12,13 @@ To run `headless-gl-canvas` in a headless Linux environment, both an X11 server 
 
 * [XVFB](https://www.x.org/releases/X11R7.7/doc/man/man1/Xvfb.1.xhtml) is an X11 server which emulates a framebuffer in order to read and write pixels
 * [Mesa](https://www.mesa3d.org/intro.html) provides an open source software implementation of OpenGL
+
+
+## Usage
+
+```
+import createCanvas from 'headless-gl-canvas';
+
+const canvas = createCanvas(512, 512);
+const gl = canvas.getContext('webgl);
+```
