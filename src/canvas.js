@@ -15,7 +15,6 @@ export default (width, height) => {
         gl.getUniformLocation = (program, name) => {
             const location = getUniformLocation.call(gl, program, name);
             if (!location) {
-                console.log('Patching uniform', name);
                 const arrayLocation = getUniformLocation.call(gl, program, `${name}[0]`);
                 if (arrayLocation) return arrayLocation;
             }

@@ -14,7 +14,8 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "build": "babel ./src --out-dir dist"
+    "build": "babel ./src --out-dir dist",
+    "headless": "xvfb-run -a -s \"-screen 0 4000x4000x24\""
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
